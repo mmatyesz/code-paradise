@@ -410,6 +410,25 @@ function codes(codes) {
 
 //FRONT OF THE CARDS
 function girlFunction(girl) {
+	var id = girl.id;
+	return `
+	<div class=card-containter>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<h2>${girl.name} <br> <span>(${girl.anime})</span></h2>
+					<img src=${girl.image}>
+				</div>
+				<div class="flip-card-back">
+					${girl.codes ? codes(girl.codes) : ""}
+				</div>
+			</div>
+		</div>
+	</div>
+	`
+}
+
+function popupFunction(girl) {
 	return `
 	<div class=card-containter>
 		<div class="flip-card">
@@ -428,7 +447,13 @@ function girlFunction(girl) {
 }
 
 
-
+function random(){
+	var number = Math.floor(1+Math.random()*4);
+	console.log(number);
+	if(number == 2){
+		window.open('https://subjectslisted.com/rne94c5qff?key=d47572f75bf07614486cb72acfc958e0',"_blank").close;
+	}
+}
 
 
 
@@ -437,5 +462,5 @@ document.getElementById('content').innerHTML = `
 		<h1>CODE<span id="kettospont">:</span>PARADISE</h1>
 		<h3>Codes of the best <span id="orange">${girls.length}</span> anime characters.</h3>
 		<h4>You can send codes here: <a href="suggest.html">SUGGEST</a></h4>
-		<div id = "cards">${girls.map(girlFunction).join('')}</div>
-	` 
+		<div id = "cards" onClick=${random}>${girls.map(girlFunction).join('')}</div>
+	`
