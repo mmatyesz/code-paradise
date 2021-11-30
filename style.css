@@ -239,7 +239,7 @@ a:hover{
     }
 
     .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg) translate(17px, 0px);
+        transform: rotateY(180deg) translate(18px, 0px);
     }
 
     #form{
