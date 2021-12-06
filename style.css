@@ -10,7 +10,22 @@ body {
     position: relative;
 }
 
-#corner-piece{
+nav {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: -1px 9px 21px -4px rgba(0, 0, 0, 0.57);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0px;
+    position: relative;
+}
+
+
+#corner-piece {
     position: absolute;
     display: block;
     right: 0;
@@ -19,7 +34,7 @@ body {
     padding: 0px;
 }
 
-#corner-piece2{
+#corner-piece2 {
     position: absolute;
     display: block;
     right: left;
@@ -44,7 +59,8 @@ h1, h3 {
 }
 
 h1 {
-    margin-top: 50px;
+    line-height: 45px;
+    margin-left: 100px;
 }
 
 ul {
@@ -72,29 +88,29 @@ img {
     height: 270px;
 }
 
-#bal{
-   
+#bal {
+
     position: absolute;
     left: 100px;
     top: 100px;
 }
 
-#bal2{
+#bal2 {
     position: absolute;
     margin-top: 200px;
     left: 100px;
     top: 650px;
 }
 
-#jobb2{
+#jobb2 {
     position: absolute;
     margin-top: 200px;
     right: 100px;
     top: 650px;
 }
 
-#container-dfef942d5a8c3424633aa04692d65909{
-    
+#container-dfef942d5a8c3424633aa04692d65909 {
+
     width: 200px;
     height: 600px;
     position: absolute;
@@ -164,7 +180,7 @@ img {
     bottom: 50px;
     right: 50px;
     padding: 10px;
-    background-color:#253056; 
+    background-color: #253056;
     transform: rotate(-180deg);
     color: white;
     display: flex;
@@ -177,88 +193,241 @@ img {
     text-align: center;
 }
 
-.banner{display: none;}
+.banner {
+    display: none;
+}
 
-#form{
+#form {
     margin-top: 50px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0;
 }
 
-a{
+a {
     text-decoration: none;
     color: #253056;
     font-size: 15px;
 }
-h4{
+
+h4 {
     text-align: center;
 }
 
-#orange{
-    color:rgb(199, 132, 6);
+#orange {
+    color: rgb(199, 132, 6);
     font-size: large;
 }
 
-a:hover{
-    color:rgb(199, 132, 6);
+.wrapper{
+    width: 90%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
 }
 
+.container{
+    background-color:rgb(199, 132, 6);
+    float: right;
+    height: 25px;
+    width: 40px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
 
-@media only screen and (min-width:710px) and (max-width:854px){
-    #bal{left: 5%; top: 200px;}
-    #bal2{left: 5%;}
-    #jobb2{right: 5%;}
-    #container-dfef942d5a8c3424633aa04692d65909{right: 3%; top: 200px;}
+.menulogo{
+    height: 3px;
+    width: 30px;
+    margin: 3px 0;
+    background-color: #253056;
+    line-height: 50px;
+    cursor: pointer;
+}
 
-    #content{
+.menu{
+    width: 500px;
+    margin-top: 0px;
+    height: 100vh;
+    background-color: white;
+    padding: 50px;
+    transform: translateX(-500px);
+    transition: .5s;
+    z-index: 2;
+    position: fixed;
+}
+
+.wrapper{
+    cursor: pointer;
+    width: 50px;
+}
+
+.menu li{
+    list-style-type: none;
+    padding: 30px 0;
+}
+
+.menu li a{
+    color:#253056;
+    text-decoration: none;
+    font-size: 20px;;
+    text-align: center;;
+}
+
+.menu li a:hover{
+    font-weight: bold;
+}
+
+.showmenu{
+    transform: translate(0);
+}
+
+@media only screen and (min-width:710px) and (max-width:854px) {
+    #bal {
+        left: 5%;
+        top: 200px;
+    }
+
+    #bal2 {
+        left: 5%;
+    }
+
+    #jobb2 {
+        right: 5%;
+    }
+
+    #container-dfef942d5a8c3424633aa04692d65909 {
+        right: 3%;
+        top: 200px;
+    }
+
+    #content {
         width: 100%;
+    }
+    .menu{
+        width: 200px;
+        margin-top: 0px;  
+        z-index: 2;
+    }
+
+    .menu li a{
+        font-size: 16px;
     }
 }
 
-@media only screen and (min-width:1000px) and (max-width:1300px){
-    #bal{left: 3%; top: 200px;}
-    #bal2{left: 3%;}
-    #jobb2{right: 3%;}
-    #container-dfef942d5a8c3424633aa04692d65909{right: 1.5%; top: 200px;}
+@media only screen and (min-width:1000px) and (max-width:1300px) {
+    #bal {
+        left: 3%;
+        top: 200px;
+    }
+
+    #bal2 {
+        left: 3%;
+    }
+
+    #jobb2 {
+        right: 3%;
+    }
+
+    #container-dfef942d5a8c3424633aa04692d65909 {
+        right: 1.5%;
+        top: 200px;
+    }
+
+    .menu{
+        width: 200px;
+        z-index: 2;
+        margin-top: 0px;
+    }
+
+    .menu li a{
+        font-size: 16px;
+    }
 }
 
-@media only screen and (max-width:710px){
-    #bal{display: none;}
-    #bal2{display: none;}
-    #jobb2{display: none;}
-    #container-dfef942d5a8c3424633aa04692d65909{display: none;}
+@media only screen and (max-width:710px) {
+    .menu{
+        width: 200px;
+        z-index: 2;
+        margin-top: 50px;
+    }
 
-    .banner{
+    .menu li a{
+        font-size: 16px;
+    }
+    
+    nav ul {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        z-index: 1;
+    }
+
+    h1 {
+        margin-left: 0px;
+    }
+
+    .container {
+        padding-top: 6px;
+    }
+
+    #bal {
+        display: none;
+    }
+
+    #bal2 {
+        display: none;
+    }
+
+    #jobb2 {
+        display: none;
+    }
+
+    #container-dfef942d5a8c3424633aa04692d65909 {
+        display: none;
+    }
+
+    .banner {
         display: flex;
         justify-content: center;
         width: 100%;
         position: absolute;
-        top: 150px;
+        top: 70px;
     }
 
     .flip-card:hover .flip-card-inner {
         transform: rotateY(180deg) translate(18px, 0px);
     }
 
-    #form{
-        margin-top: 100px;
+    #form {
+        margin-top: 0px;
+        padding-top: 150px;
+        z-index: 1;
     }
 
-    #content{
+    #content {
         display: flex;
         flex-direction: column;
     }
 
-    #content .banner{
+    #content .banner {
         position: inherit;
         display: flex;
         align-self: center;
         margin: auto;
     }
 
-    #cards{
+    #cards {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -267,15 +436,15 @@ a:hover{
         padding: 0px;
         padding: auto;
     }
-    .flip-card{
+
+    .flip-card {
         padding: 0px;
         padding-left: 10px;
         margin-right: 0px;
     }
-    .div-container{
+
+    .div-container {
         display: flex;
         flex-direction: column;
     }
 }
-
-

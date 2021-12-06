@@ -9,10 +9,18 @@
     <title>CODE:PARADISE</title>
 </head>
 <body>
-    <h1>CODE<span id="kettospont">:</span>PARADISE</h1>
-	<h3>Suggest codes, so we can update our website!</h3>
-    <h4>Back to home page: <a href="index.html">HOME</a></h4>
-
+    <nav>
+        <h1>CODE<span id="kettospont">:</span>PARADISE</h1>
+        <div class="wrapper">
+            <div class="menulogo"></div>
+            <div class="menulogo"></div>
+            <div class="menulogo"></div>
+        </div>
+    </nav>
+    <ul class="menu">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="suggest.html">SUGGEST</a></li>
+    </ul>
     <div id="bal">
         <script type="text/javascript">
             atOptions = {
@@ -67,4 +75,12 @@
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeROThE7ehK5A-3Ucw5j8uga6TTcBL-Uzk50OX-iul92o5w7Q/viewform?embedded=true" width="540" height="640" frameborder="0" marginheight="0" marginwidth="0">Betöltés…</iframe>
     </div>
 </body>
+<script>
+var logo = document.querySelector('.wrapper');
+var menu = document.querySelector('.menu');
+
+logo.addEventListener('click',function(){
+	menu.classList.toggle('showmenu');
+});
+</script>
 </html>

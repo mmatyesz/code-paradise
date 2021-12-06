@@ -455,12 +455,15 @@ function random(){
 	}
 }
 
+var logo = document.querySelector('.wrapper');
+var menu = document.querySelector('.menu');
+
+logo.addEventListener('click',function(){
+	menu.classList.toggle('showmenu');
+});
 
 
 //PUTTING THE DATA INTO HTML
 document.getElementById('content').innerHTML = `
-		<h1>CODE<span id="kettospont">:</span>PARADISE</h1>
-		<h3>Codes of the best <span id="orange">${girls.length}</span> anime characters.</h3>
-		<h4>You can send codes here: <a href="suggest.html">SUGGEST</a></h4>
 		<div id = "cards" onClick=${random}>${girls.map(girlFunction).join('')}</div>
 	`
