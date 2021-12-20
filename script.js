@@ -407,10 +407,11 @@ girls = [
 	},
 ];
 
+//TO THE TOP BUTTON
+
 var mybutton = document.getElementById("button");
 mybutton.style.display = "none";
 
-// When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
@@ -421,7 +422,6 @@ function scrollFunction() {
 	}
 }
 
-// When the user clicks on the button, scroll to the top of the document
 function topFunction() {
 	window.scrollTo({
 		top: 0,
@@ -431,7 +431,7 @@ function topFunction() {
 }
 
 
-//MAPPING THE CODES FROM THE ARRAY "CODES"
+//MAPPING THE CODES FROM THE ARRAY "GIRLS"
 function codes(codes) {
 	return `
 		<ul>
@@ -468,12 +468,16 @@ const girlFunction = (girls) => {
 
 girlFunction(girls);
 
+//AD DISPLAY
+
 function random() {
 	var number = Math.floor(1 + Math.random() * 4);
 	if (number == 2) {
 		window.open('https://subjectslisted.com/rne94c5qff?key=d47572f75bf07614486cb72acfc958e0', "_blank").close;
 	}
 }
+
+//SLIDE IN MENU
 
 var logo = document.querySelector('.wrapper');
 var menu = document.querySelector('.menu');
@@ -482,7 +486,11 @@ logo.addEventListener('click', function () {
 	menu.classList.toggle('showmenu');
 });
 
+//SEARCHBAR
+
 const searchBar = document.getElementById('searchBar');
+const searchgomb1 = document.getElementById('searchgomb1');
+const searchgomb2 = document.getElementById('searchgomb2');
 
 searchBar.addEventListener('keyup',(e)=>{
 	const searchString = e.target.value.toLowerCase();
@@ -491,4 +499,13 @@ searchBar.addEventListener('keyup',(e)=>{
 	});
 	girlFunction(filteredCharacters);
 });
+
+function check(){
+	const searchString = searchBar.value.toLowerCase();
+	const filteredCharacters = girls.filter(character =>{
+		return character.name.toLowerCase().includes(searchString) || character.anime.toLowerCase().includes(searchString);
+	});
+	girlFunction(filteredCharacters);
+}
+
 
