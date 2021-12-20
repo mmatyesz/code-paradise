@@ -58,10 +58,10 @@ input[type="text"] {
 }
 
 .fa{
-    position: absolute;
-    right: 20px;
-    bottom: 8px;
     cursor: pointer;
+    position: absolute;
+    bottom: 8px;
+    right: 20px;
 }
 
 #corner-piece {
@@ -544,12 +544,9 @@ h4 {
         width: 500px;
     }
 
-    .searchicon2{
-        display: block;
-    }
     .fa{
-        position: absolute;
-        right: 10px;
+        display: block;
         bottom: 8px;
+        right: 12px;
     }
 }

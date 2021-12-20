@@ -488,11 +488,10 @@ logo.addEventListener('click', function () {
 
 //SEARCHBAR
 
-const searchBar = document.getElementById('searchBar');
-const searchgomb1 = document.getElementById('searchgomb1');
-const searchgomb2 = document.getElementById('searchgomb2');
+const searchBar1 = document.getElementById('searchBar1');
+const searchBar2 = document.getElementById('searchBar2');
 
-searchBar.addEventListener('keyup',(e)=>{
+searchBar1.addEventListener('keyup',(e)=>{
 	const searchString = e.target.value.toLowerCase();
 	const filteredCharacters = girls.filter(character =>{
 		return character.name.toLowerCase().includes(searchString) || character.anime.toLowerCase().includes(searchString);
@@ -500,12 +499,12 @@ searchBar.addEventListener('keyup',(e)=>{
 	girlFunction(filteredCharacters);
 });
 
-function check(){
-	const searchString = searchBar.value.toLowerCase();
+searchBar2.addEventListener('keyup',(e)=>{
+	const searchString = e.target.value.toLowerCase();
 	const filteredCharacters = girls.filter(character =>{
 		return character.name.toLowerCase().includes(searchString) || character.anime.toLowerCase().includes(searchString);
 	});
 	girlFunction(filteredCharacters);
-}
+});
 
 
