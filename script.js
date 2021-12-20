@@ -5,7 +5,9 @@
 	anime: ""
 },*/
 
-const girls = [
+let girls = [];
+
+girls = [
 	{
 		name: "Alice",
 		codes: ["353944", "352952", "348149", "344665", "332840"],
@@ -442,25 +444,29 @@ function megnyit(code) {
 	window.open("nhentai.net/g/" + code)
 }
 
-//FRONT OF THE CARDS
-function girlFunction(girl) {
-	console.log(girl.id);
-	return `
+
+
+const girlFunction = (girls) => {
+	const htmlString = girls.map((girl) => {
+		return `
 		<div class=card-containter>
-			<div class="flip-card">
-				<div class="flip-card-inner">
-					<div class="flip-card-front">
-						<h2>${girl.name} <br> <span>(${girl.anime})</span></h2>
-						<img src=${girl.image}>
-					</div>
-					<div class="flip-card-back">
-						${girl.codes ? codes(girl.codes) : ""}
-					</div>
+		<div class="flip-card">
+			<div class="flip-card-inner">
+				<div class="flip-card-front">
+					<h2>${girl.name} <br> <span>(${girl.anime})</span></h2>
+					<img src=${girl.image}>
+				</div>
+				<div class="flip-card-back">
+					${girl.codes ? codes(girl.codes) : ""}
 				</div>
 			</div>
 		</div>
-		`
+	</div>
+		`;}).join('');
+	document.getElementById('cards').innerHTML = htmlString;
 }
+
+girlFunction(girls);
 
 function random() {
 	var number = Math.floor(1 + Math.random() * 4);
@@ -476,8 +482,13 @@ logo.addEventListener('click', function () {
 	menu.classList.toggle('showmenu');
 });
 
+const searchBar = document.getElementById('searchBar');
 
-//PUTTING THE DATA INTO HTML
-document.getElementById('content').innerHTML = `
-		<div id = "cards" onClick=${random}>${girls.map(girlFunction).join('')}</div>
-	`
+searchBar.addEventListener('keyup',(e)=>{
+	const searchString = e.target.value.toLowerCase();
+	const filteredCharacters = girls.filter(character =>{
+		return character.name.toLowerCase().includes(searchString) || character.anime.toLowerCase().includes(searchString);
+	});
+	girlFunction(filteredCharacters);
+});
+

@@ -27,6 +27,41 @@ nav {
     background-color: white;
 }
 
+#searchWrapper {
+    line-height: 50px;
+    width: 100%;
+    padding-right: 10px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: auto;
+    position: relative;
+}
+
+#searchWrapper_header {
+    line-height: 50px;
+    width: 100%;
+    padding-right: 10px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: auto;
+    position: relative;
+}
+
+input[type="text"] {
+    height: 30px;
+    width: 500px;
+    margin-left: 5px;
+}
+
+.fa{
+    position: absolute;
+    right: 20px;
+    bottom: 8px;
+}
 
 #corner-piece {
     position: absolute;
@@ -116,12 +151,11 @@ img {
 }
 
 #container-dfef942d5a8c3424633aa04692d65909 {
-
     width: 200px;
     height: 600px;
     position: absolute;
     right: 100px;
-    top: 100px;
+    top: 90px;
 }
 
 .flip-card {
@@ -173,7 +207,7 @@ img {
 
 #cards {
     margin: auto;
-    margin-top: 100px;
+    margin-top: 80px;
     display: flex;
     justify-content: space-around;
     width: 60%;
@@ -230,6 +264,7 @@ h4 {
 .wrapper {
     width: 90%;
     margin: 0;
+    margin-right: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,7 +336,7 @@ h4 {
 @media only screen and (min-width:710px) and (max-width:854px) {
     #bal {
         left: 5%;
-        top: 200px;
+        top: 110px;
     }
 
     #bal2 {
@@ -314,7 +349,7 @@ h4 {
 
     #container-dfef942d5a8c3424633aa04692d65909 {
         right: 3%;
-        top: 200px;
+        top: 95 px;
     }
 
     #content {
@@ -327,15 +362,29 @@ h4 {
         z-index: 2;
     }
 
+    #cards{
+        margin-top: 80px;
+    }
+
     .menu li a {
         font-size: 16px;
+    }
+    nav{
+        padding: 0px;
+    }
+    h1{
+        padding: 0px;
+        margin-left: 10px;
+    }
+    .wrapper{
+        margin-right: 10px;
     }
 }
 
 @media only screen and (min-width:1000px) and (max-width:1300px) {
     #bal {
         left: 3%;
-        top: 200px;
+        top: 90px;
     }
 
     #bal2 {
@@ -348,7 +397,15 @@ h4 {
 
     #container-dfef942d5a8c3424633aa04692d65909 {
         right: 1.5%;
-        top: 200px;
+        top: 90px;
+    }
+
+    h1{
+        padding: 0px;
+        margin-left: 10px;
+    }
+    .wrapper{
+        margin-right: 10px;
     }
 
     .menu {
@@ -360,6 +417,10 @@ h4 {
     .menu li a {
         font-size: 16px;
     }
+
+    #cards{
+        margin-top: 80px;
+    }
 }
 
 @media only screen and (max-width:710px) {
@@ -367,6 +428,10 @@ h4 {
         width: 200px;
         z-index: 2;
         margin-top: 0px;
+    }
+
+    .menu h2 {
+        display: none;
     }
 
     .menu li a {
@@ -410,7 +475,7 @@ h4 {
         display: flex;
         justify-content: center;
         position: inherit;
-        margin-top: 100px;
+        margin-top: 75px;
         width: 100%;
     }
 
@@ -456,5 +521,34 @@ h4 {
     .div-container {
         display: flex;
         flex-direction: column;
+    }
+
+    #searchWrapper {
+        width: 70%;
+        padding: 0px;
+        margin: auto;
+        display: flex;
+    }
+
+    #searchWrapper_header {
+        display: none;
+    }
+
+    .wrapper{
+        margin-right: 0px;
+    }
+
+    input[type="text"] {
+        margin-top: 20px;
+        width: 500px;
+    }
+
+    .searchicon2{
+        display: block;
+    }
+    .fa{
+        position: absolute;
+        right: 10px;
+        bottom: 8px;
     }
 }
